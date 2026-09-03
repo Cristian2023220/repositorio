@@ -8,7 +8,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <Flame className="w-5 h-5 text-amber-500" />
             <span className="text-gray-400">
-              © 2025 Dev Arena. Que os códigos estejam sempre a seu favor.
+              © 2026 Dev Arena. Que os códigos estejam sempre a seu favor.
             </span>
           </div>
           

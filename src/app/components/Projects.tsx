@@ -2,34 +2,34 @@ import { Flame, Github, Sparkles } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Arena Commerce',
-    description: 'Plataforma de e-commerce completa com sistema de pagamentos integrado, gestão de estoque e painel administrativo.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    image: 'https://images.unsplash.com/photo-1629278353770-38492d1640c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBzdXJ2aXZhbHxlbnwxfHx8fDE3NjY5NzEyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Refeitório Check',
+    description: 'Sistema de gestão do refeitório do IFBaiano — Campus Itapetinga. Alunos confirmam presença pelo app, a equipe acompanha pelo painel web, e a liberação no refeitório acontece por leitura de cartão RFID no totem.',
+    tech: ['TypeScript', 'CSS', 'JavaScript', 'HTML'],
+    image: 'https://private-user-images.githubusercontent.com/141922949/645958742-5afa8952-0b56-4391-bec7-8baaafcbb31e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg0NjY3ODksIm5iZiI6MTc4ODQ2NjQ4OSwicGF0aCI6Ii8xNDE5MjI5NDkvNjQ1OTU4NzQyLTVhZmE4OTUyLTBiNTYtNDM5MS1iZWM3LThiYWFhZmNiYjMxZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkwM1QyMDE0NDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZTEyMjI4NTRiNDhmN2E5MzhiZWQ5YmI1MmJmZTA0MWQ2Njg4MjkxMTFlYTg1ZGE2MzBlMjFkOTIyOTAyN2E3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.axNnUE0RDIGiOvWak_VmyaABFdcp3YYB15zqUwixgfo',
     status: 'Concluído',
     featured: true
   },
   {
-    title: 'Tribute Tracker',
-    description: 'Sistema de gestão de projetos e tarefas com colaboração em tempo real, notificações push e relatórios avançados.',
-    tech: ['Next.js', 'TypeScript', 'MongoDB', 'Socket.io'],
-    image: 'https://images.unsplash.com/photo-1598523757226-28df3fd7900b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJlJTIwZmxhbWVzJTIwZGFya3xlbnwxfHx8fDE3NjY5MTE4MTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Rockit Vision — AI Hand Gesture Recognition',
+    description: 'Um sistema web de visão computacional em tempo real para reconhecimento, classificação e tradução de gestos manuais, desenvolvido como Trabalho de Conclusão de Curso (TCC) em Sistemas de Informação. O projeto utiliza a webcam do usuário diretamente no navegador para capturar frames, processar a malha esquelética das mãos e classificar o gesto exibido em tempo real através de uma arquitetura baseada em WebSockets..',
+    tech: ['Python', 'OpenCV', 'MediaPipe', 'TensorFlow', 'Flask', 'JavaScript', 'Docker'],
+    image: 'https://private-user-images.githubusercontent.com/141922949/645972162-79f2b322-2eec-4a6d-bb28-a7e6b45d9d91.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg0NjgxNTEsIm5iZiI6MTc4ODQ2Nzg1MSwicGF0aCI6Ii8xNDE5MjI5NDkvNjQ1OTcyMTYyLTc5ZjJiMzIyLTJlZWMtNGE2ZC1iYjI4LWE3ZTZiNDVkOWQ5MS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkwM1QyMDM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NGRlN2RiZGNmODUxYzliYTg2M2I0MWM4M2IwMWIzZGNlNTZjNjRmODM5NGE5Yjk3ODBjYWIzODE0Yjk3MTkzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.DHu88DYP-A473kIS4k7uybUO2Nq875cQFY4dHpl1egU',
     status: 'Concluído',
     featured: true
   },
   {
-    title: 'District Dashboard',
-    description: 'Dashboard analítico com visualizações de dados interativas, gráficos em tempo real e exportação de relatórios.',
-    tech: ['React', 'D3.js', 'Python', 'FastAPI'],
-    image: 'https://images.unsplash.com/photo-1656055449419-9db540f8f1e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkJTIwbWV0YWxsaWMlMjB0ZXh0dXJlfGVufDF8fHx8MTc2Njk3MTI3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    status: 'Em desenvolvimento',
+    title: '🎵 Spotify Clone',
+    description: 'Este projeto é uma réplica da interface do Spotify, desenvolvida durante a Jornada Full Stack. A aplicação permite navegar por artistas e músicas, consumindo dados de uma API integrada com um banco de dados NoSQL.',
+    tech: ['JavaScript', 'React', 'CSS', 'Node.js', 'MongoDB'],
+    image: 'https://6a997f4ed601bb7bf57be1a0.imgix.net/sandbox/Captura%20de%20tela%202026-09-03%20112531.png?w=1600&h=600&fit=crop&crop=faces&auto=format,compress',
+    status: 'Concluído',
     featured: false
   },
   {
-    title: 'Mockingjay API',
-    description: 'API RESTful escalável com autenticação JWT, rate limiting, documentação Swagger e testes automatizados.',
-    tech: ['Node.js', 'Express', 'Redis', 'Docker'],
-    image: 'https://images.unsplash.com/photo-1629278353770-38492d1640c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBzdXJ2aXZhbHxlbnwxfHx8fDE3NjY5NzEyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'SaúdeMap',
+    description: 'O SaúdeMap é uma aplicação web interativa desenvolvida para facilitar o acesso à saúde em Itapetinga/BA. O sistema permite que cidadãos localizem hospitais, farmácias e postos de saúde em tempo real, verifiquem a disponibilidade de médicos e medicamentos, e tracem rotas diretas da sua posição até o destino.',
+    tech: ['Python', 'Django', 'JavaScript', 'Leaflet.js', 'PostgreSQL'],
+    image: 'https://private-user-images.githubusercontent.com/141922949/645970356-51293279-0b44-44cd-9a76-cf41a643a53b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg0Njc5NTUsIm5iZiI6MTc4ODQ2NzY1NSwicGF0aCI6Ii8xNDE5MjI5NDkvNjQ1OTcwMzU2LTUxMjkzMjc5LTBiNDQtNDRjZC05YTc2LWNmNDFhNjQzYTUzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkwM1QyMDM0MTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yOTY5NGM2MmVkZjBmNTI0OTYwNTVhMmY5NDJjMWIyYWM5YmJhODUyZWQ1NWNiMGVkYjQzN2JkOWJlZWIzOTkyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.ZlMmoFS2QB5wFzQMCBzay1BprlQXE-aL_IsXMVbxk8w',
     status: 'Concluído',
     featured: false
   }

@@ -30,6 +30,12 @@ const specialties = [
     title: 'IA Development',
     skills: ['Python', 'TensorFlow', 'Computer Vision'],
     level: 'Intermediário'
+  },
+  {
+    icon: Award,
+    title: 'Machine Learning',
+    skills: ['Scikit-learn', 'Pandas', 'NumPy', 'Data Analysis'],
+    level: 'Intermediário'
   }
 ];
 
