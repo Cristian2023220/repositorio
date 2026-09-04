@@ -1,37 +1,66 @@
-import { Flame, Github, Sparkles } from 'lucide-react';
+import { Flame, Github, Sparkles, ExternalLink } from 'lucide-react';
 
-const projects = [
+interface ProjectLink {
+  label: string;
+  url: string;
+}
+
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  image: string;
+  status: string;
+  featured: boolean;
+  deployUrl?: string;
+  links?: ProjectLink[];
+  githubUrl?: string;
+}
+
+const projects: Project[] = [
   {
     title: 'Refeitório Check',
     description: 'Sistema de gestão do refeitório do IFBaiano — Campus Itapetinga. Alunos confirmam presença pelo app, a equipe acompanha pelo painel web, e a liberação no refeitório acontece por leitura de cartão RFID no totem.',
     tech: ['TypeScript', 'CSS', 'JavaScript', 'HTML'],
-    image: 'https://private-user-images.githubusercontent.com/141922949/645958742-5afa8952-0b56-4391-bec7-8baaafcbb31e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg0NjY3ODksIm5iZiI6MTc4ODQ2NjQ4OSwicGF0aCI6Ii8xNDE5MjI5NDkvNjQ1OTU4NzQyLTVhZmE4OTUyLTBiNTYtNDM5MS1iZWM3LThiYWFhZmNiYjMxZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkwM1QyMDE0NDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZTEyMjI4NTRiNDhmN2E5MzhiZWQ5YmI1MmJmZTA0MWQ2Njg4MjkxMTFlYTg1ZGE2MzBlMjFkOTIyOTAyN2E3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.axNnUE0RDIGiOvWak_VmyaABFdcp3YYB15zqUwixgfo',
+    image: '/public/projects/galeria.png',
     status: 'Concluído',
-    featured: true
+    featured: true,
+    links: [
+      { label: 'Painel Web', url: 'https://painelweb-eight.vercel.app/' },
+      { label: 'App Aluno', url: 'https://appdoaluno.vercel.app/' },
+      { label: 'Totem RFID', url: 'https://totem-ivory.vercel.app/' }
+    ],
+    githubUrl: 'https://github.com/Cristian2023220/refeitorio-check'
   },
   {
     title: 'Rockit Vision — AI Hand Gesture Recognition',
     description: 'Um sistema web de visão computacional em tempo real para reconhecimento, classificação e tradução de gestos manuais, desenvolvido como Trabalho de Conclusão de Curso (TCC) em Sistemas de Informação. O projeto utiliza a webcam do usuário diretamente no navegador para capturar frames, processar a malha esquelética das mãos e classificar o gesto exibido em tempo real através de uma arquitetura baseada em WebSockets..',
     tech: ['Python', 'OpenCV', 'MediaPipe', 'TensorFlow', 'Flask', 'JavaScript', 'Docker'],
-    image: 'https://private-user-images.githubusercontent.com/141922949/645972162-79f2b322-2eec-4a6d-bb28-a7e6b45d9d91.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg0NjgxNTEsIm5iZiI6MTc4ODQ2Nzg1MSwicGF0aCI6Ii8xNDE5MjI5NDkvNjQ1OTcyMTYyLTc5ZjJiMzIyLTJlZWMtNGE2ZC1iYjI4LWE3ZTZiNDVkOWQ5MS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkwM1QyMDM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NGRlN2RiZGNmODUxYzliYTg2M2I0MWM4M2IwMWIzZGNlNTZjNjRmODM5NGE5Yjk3ODBjYWIzODE0Yjk3MTkzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.DHu88DYP-A473kIS4k7uybUO2Nq875cQFY4dHpl1egU',
+    image: '/public/projects/vision.jpg',
     status: 'Concluído',
-    featured: true
+    featured: true,
+    deployUrl: 'https://vision-app-vbkv.onrender.com/',
+    githubUrl: 'https://github.com/Cristian2023220/nlw-operator'
   },
   {
     title: '🎵 Spotify Clone',
     description: 'Este projeto é uma réplica da interface do Spotify, desenvolvida durante a Jornada Full Stack. A aplicação permite navegar por artistas e músicas, consumindo dados de uma API integrada com um banco de dados NoSQL.',
     tech: ['JavaScript', 'React', 'CSS', 'Node.js', 'MongoDB'],
-    image: 'https://6a997f4ed601bb7bf57be1a0.imgix.net/sandbox/Captura%20de%20tela%202026-09-03%20112531.png?w=1600&h=600&fit=crop&crop=faces&auto=format,compress',
+    image: '/public/projects/spotify.png',
     status: 'Concluído',
-    featured: false
+    featured: false,
+    deployUrl: 'https://projeto-spotify-jornada-full-stack-seven.vercel.app/',
+    githubUrl: 'https://github.com/Cristian2023220/Projeto-Spotify-Jornada-FullStack-'
   },
   {
     title: 'SaúdeMap',
     description: 'O SaúdeMap é uma aplicação web interativa desenvolvida para facilitar o acesso à saúde em Itapetinga/BA. O sistema permite que cidadãos localizem hospitais, farmácias e postos de saúde em tempo real, verifiquem a disponibilidade de médicos e medicamentos, e tracem rotas diretas da sua posição até o destino.',
     tech: ['Python', 'Django', 'JavaScript', 'Leaflet.js', 'PostgreSQL'],
-    image: 'https://private-user-images.githubusercontent.com/141922949/645970356-51293279-0b44-44cd-9a76-cf41a643a53b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg0Njc5NTUsIm5iZiI6MTc4ODQ2NzY1NSwicGF0aCI6Ii8xNDE5MjI5NDkvNjQ1OTcwMzU2LTUxMjkzMjc5LTBiNDQtNDRjZC05YTc2LWNmNDFhNjQzYTUzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkwM1QyMDM0MTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yOTY5NGM2MmVkZjBmNTI0OTYwNTVhMmY5NDJjMWIyYWM5YmJhODUyZWQ1NWNiMGVkYjQzN2JkOWJlZWIzOTkyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.ZlMmoFS2QB5wFzQMCBzay1BprlQXE-aL_IsXMVbxk8w',
+    image: '/public/projects/map.png',
     status: 'Concluído',
-    featured: false
+    featured: false,
+    deployUrl: 'https://saude-map.onrender.com/',
+    githubUrl: 'https://github.com/Cristian2023220/saude-map'
   }
 ];
 
@@ -108,14 +137,48 @@ export function Projects() {
                       ))}
                     </div>
 
-                    <div className="flex gap-3">
-                      <button className="flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-black rounded-lg transition-colors">
-                        <span>Ver Projeto</span>
-                      </button>
-                      <button className="flex items-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-gray-300 rounded-lg transition-colors border border-zinc-700">
-                        <Github className="w-4 h-4" />
-                        <span>GitHub</span>
-                      </button>
+                    <div className="flex flex-wrap items-center gap-3">
+                      {/* Caso tenha links múltiplos (como os 3 módulos do Refeitório Check) */}
+                      {project.links && project.links.length > 0 && (
+                        project.links.map((linkItem, linkIndex) => (
+                          <a
+                            key={linkIndex}
+                            href={linkItem.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-black font-medium text-sm rounded-lg transition-colors"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            <span>{linkItem.label}</span>
+                          </a>
+                        ))
+                      )}
+
+                      {/* Caso tenha um único link direto */}
+                      {project.deployUrl && (
+                        <a
+                          href={project.deployUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-black font-medium rounded-lg transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          <span>Ver Projeto</span>
+                        </a>
+                      )}
+
+                      {/* Link do GitHub */}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-gray-300 hover:text-white rounded-lg transition-colors border border-zinc-700"
+                        >
+                          <Github className="w-4 h-4" />
+                          <span>GitHub</span>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
