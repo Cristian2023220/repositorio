@@ -39,7 +39,7 @@ const projects: Project[] = [
     image: '/images/vision.jpg',
     status: 'Concluído',
     featured: true,
-    deployUrl: 'https://vision-app-vbkv.onrender.com/',
+    deployUrl: 'https://vision.cristiandev.codes/',
     githubUrl: 'https://github.com/Cristian2023220/nlw-operator'
   },
   {
